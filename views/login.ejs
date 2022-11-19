@@ -1,19 +1,47 @@
 <%- include ("./partials/header") %>
+<div class="container" id="container">
+	<div class="form-container sign-up-container">
+		<form action="/register" method = "POST">
+			<h1>Inregistrare</h1>
+			<input type="text" name = "username" placeholder = "User">
+            <input type="password" name = "password" placeholder = "Parola">
+            <input type="password" name = "confirmation" placeholder = "Confirma parola">
+            <input type="name" name = "name" placeholder = "Nume de Familie">
+            <input type="fname" name = "fname" placeholder = "Prenume">
+            <label>Esti muncitor?</label>
+            <input type="checkbox" id = "checkbox" name = "checkbox">
+            <input type="text" class = "hidden" name = "department" id = "department" placeholder = "department">
+            <input class = "hidden" id = "price" type="number" name = "price" placeholder = "Pret/ora ">
+            <button type = "submit">Inregistreaza-te</button>
 
-<section id = "login">
-    <div id = "login-box">
-        <h1>Login</h1>
-        <form action = "login" method = "POST">
-            <div class = "login-row">
-                <input class = "" type="text" name = "username" placeholder = "user ">
-            </div>
-            <div class = "login-row">
-                <input type="password" class  name = "password" placeholder = "parola">
-            </div>
-            <button class = "submit-btn form-btn" type = "submit">Login</button>
-        </form>
-        <p>Don't have an acount? <a href = "register">Register here</a></p>
-    </div>
-</section>
+		</form>
+	</div>
+	<div class="form-container sign-in-container">
+		<form action="/login" method = "POST">
+			<h1>Sign in</h1>
+			<span>or use your account</span>
+			<input type="text" name = "username" placeholder="User" />
+			<input type="password" name = "password" placeholder="Parola" />
+			<a href="/password">Ti-ai uitat parola?</a>
+			<button>Autentificare</button>
+		</form>
+	</div>
+
+	<div class="overlay-container">
+		<div class="overlay">
+			<div class="overlay-panel overlay-left">
+				<h1>Bine ai venit!</h1>
+				<p>Te rugam sa te inregistrezi cu datele personale</p>
+				<button class="ghost" id="signIn">Autentificare</button>
+			</div>
+			<div class="overlay-panel overlay-right">
+				<h1>Salut, prietene!</h1>
+				<p>Introdu-ti datele de autentificare si exploreaza lumea meseriasilor</p>
+				<button class="ghost" id="signUp">Inregistrare</button>
+			</div>
+		</div>
+	</div>
+</div>
+<script src = "./index.js"></script>
 
 <%- include("./partials/footer") %>

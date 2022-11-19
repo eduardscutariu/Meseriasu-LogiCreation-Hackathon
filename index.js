@@ -99,15 +99,22 @@ app.get("/login", (req, res) => {
     res.render("login");
 })
 
+
 app.post("/login", passport.authenticate("local", {
     successRedirect:"/",
     failureRedirect:"/login"
   }))
 
   app.get("/logout", (req, res) => {
-    req.logOut();
-    res.redirect("/login");
+    req.logOut(() => {
+        res.redirect("/login");
+
+    });
 });
+
+app.get("/about", (req, res) => {
+    res.render("about");
+})
 
 app.listen(3000, () => {
     console.log("Server is running on port: 3000");

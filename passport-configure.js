@@ -5,7 +5,9 @@ function initialize(passport)
 {
   const authenticateUser = (username, password, done) => {
     User.findOne({username:username}, (err, foundUser) => {
+      if (err) console.log(err);
       if (!err) {
+        console.log("2");
         if (!foundUser) {done(null, false); console.log("1")}
         else {
             bcrypt.compare(password,foundUser.password, function (err, result)
