@@ -1,0 +1,19 @@
+<%- include ("./partials/header") %>
+
+<section id = "login">
+    <div id = "login-box">
+        <h1>Login</h1>
+        <form action = "login" method = "POST">
+            <div class = "login-row">
+                <input class = "" type="text" name = "username" placeholder = "user ">
+            </div>
+            <div class = "login-row">
+                <input type="password" class  name = "password" placeholder = "parola">
+            </div>
+            <button class = "submit-btn form-btn" type = "submit">Login</button>
+        </form>
+        <p>Don't have an acount? <a href = "register">Register here</a></p>
+    </div>
+</section>
+
+<%- include("./partials/footer") %>

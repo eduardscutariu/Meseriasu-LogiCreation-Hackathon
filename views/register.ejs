@@ -1,0 +1,17 @@
+<%-include ("./partials/header") %>
+
+<form action = "/register" method = "POST">
+    <input type="text" name = "username" placeholder = "User">
+    <input type="password" name = "password" placeholder = "Parola">
+    <input type="password" name = "confirmation" placeholder = "Confirma parola">
+    <input type="name" name = "name" placeholder = "Nume de Familie">
+    <input type="fname" name = "fname" placeholder = "Prenume">
+    <label>Esti muncitor?</label>
+    <input type="checkbox" id = "checkbox" name = "checkbox">
+    <input type="text" class = "hidden" name = "department" id = "department" placeholder = "department">
+
+    <input class = "hidden" id = "price" type="number" name = "price" placeholder = "Pret/ora ">
+    <button type = "submit">Inregistreaza-te</button>
+    <script src = "./index.js"></script>
+    <!-- <select name="" id=""></select> -->
+</form>
