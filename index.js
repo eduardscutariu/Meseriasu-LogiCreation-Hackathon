@@ -150,7 +150,7 @@ app.post("/login", passport.authenticate("local", {
 
 app.get("/about", (req, res) => {
     let auth = false; 
-    if (req.isAuthenticated) auth = true;
+    if (req.isAuthenticated()) auth = true;
     res.render("about", {auth: auth, money: money});
 })
 
@@ -212,6 +212,29 @@ app.post("/message", (req, res) => {
     res.redirect("/");  
 })
 
+app.post("/off", (req, res) => {
+    const ore = req.body.ore;
+    const from = req.user.username;
+    const to = req.body.to;
+    const message = new Message({
+        name: from, 
+        to: to,
+        message: ore
+    })
+    message.save();
+
+    User.findOneAndUpdate(
+        { username: to}, 
+        { $push: { message: message  } },
+       function (error, success) {
+             if (error) {
+                 console.log(error);
+             } else {
+                 console.log(success);
+             }
+    })
+    res.redirect("/message");
+})
 
 app.listen(3000, () => {
     console.log("Server is running on port: 3000");

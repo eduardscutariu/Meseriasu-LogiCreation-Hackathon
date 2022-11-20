@@ -3,8 +3,10 @@
 <% messages.forEach((message) => { %>
     <div class = "comp">
     <h2> user: <%= message.name %> </h2>
-    <p> mesaj: <%= message.message %> </p>
+    <p style = "margin-bottom: 0"> mesaj: <%= message.message %> </p>
     <form action="/off" method = "post">
+    <input name = "ore" style = "margin-bottom: 25px" type="number" placeholder = "Numar de ore necesare">
+    <input type="hidden" name = "to" value = <%= message.name %>>
     <button type = "submit">Trimite oferta</button>
     </form>
     </div>
