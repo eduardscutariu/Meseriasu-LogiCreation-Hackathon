@@ -1,4 +1,18 @@
-<%- include("./partials/header"); -%>
+<%- include ("./partials/header", {auth:auth, money: money}) %>
+
+<section class = "jobs">
+<% data.forEach(item => { %>
+          <div class="comp">
+            <img src = <%= "./uploads/" + item.img %> class="comp-img" alt="imagine">
+            <div class="">
+              <h5 class=""><%= item.name + " " + item.fname%></h5>
+              <p class=""><%= "Specializare: " + item.job %></p>
+              <p><%= "Pret: " + item.price + " RON/ora" %></p>
+              <a href = <%= "/user/" + item.username %> style = "font-size:13px;color:white">
+              <button style = "margin-bottom: 15px; width: auto; padding: 10px 20px" type = "submit"> Contacteaza</button> </a>
+            </div>
+          </div>
+    <% }); %>   
 
 
-<h2>ok</h2>
+</section>

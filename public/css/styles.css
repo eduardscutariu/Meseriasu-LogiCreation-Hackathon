@@ -1,18 +1,8 @@
-:root {
-    --c1: #1f1d36f5;
-    --c2: #FFFFFF;
-    --c3: #1f1d36;
-    --c4: #212529;
-  }
-/************ Tags ****************/
 
-
-/************ Classes ************/
 .hidden{
     display:none;
 }
 
-/********** Ids ****************/
 
 
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
@@ -56,8 +46,8 @@ a {
 
 button {
 	border-radius: 20px;
-	border: 1px solid #FF4B2B;
-	background-color: #FF4B2B;
+	border: 1px solid black;
+	background-color: black;
 	color: #FFFFFF;
 	font-size: 12px;
 	font-weight: bold;
@@ -65,6 +55,10 @@ button {
 	letter-spacing: 1px;
 	text-transform: uppercase;
 	transition: transform 80ms ease-in;
+}
+
+button:hover {
+	background-color:rgb(30, 30, 30);
 }
 
 button:active {
@@ -81,9 +75,13 @@ button.ghost {
 }
 
 nav {
-    border-radius: 20px;
+    border-radius: 25px;
     display:block;
+    background-color: black;
+    font-size:19px;
+    
 }
+
 .container-fluid {
     padding: 0 50px;
 }
@@ -107,6 +105,41 @@ input {
 }
 
 
+select {
+    display:block;
+    width:0px;
+    height:0px;
+    margin: 0;
+    border-radius: 5px;
+    border: 0px;
+    transition: 1.5s;
+
+}
+
+.active {
+    border:1px solid grey;
+    width:186px;
+    height:100px;
+    
+}
+
+
+select::-webkit-scrollbar {
+    width: 14px;
+    height: 14px;
+  }
+
+  select::-webkit-scrollbar-track {
+    border: rgb(180, 180, 180);
+    background-color: var(--c2);
+  }
+  
+  select::-webkit-scrollbar-thumb {
+    background-color: var(--c4);
+    border: 1px solid rgb(193, 193, 193);
+  }
+
+
 
 .container {
 	background-color: #fff;
@@ -118,13 +151,39 @@ input {
 	overflow: hidden;
 	width: 768px;
 	max-width: 100%;
-	min-height: 500px;
+	min-height: 600px;
     box-sizing: border-box;
 }
 
+.comp-img{
+    height: 170px;
+    width:170px;
+    margin-bottom:20px;
+}
+
+.jobs
+{
+ display: grid;
+ grid-template-columns: auto auto auto;
+ padding: 10px;
+ gap:10px;
+}
+
+.money
+{
+    position:fixed;
+    top: 5px;
+    right:5px;
+}
+
+.comp{
+    background-color:white;
+    text-align:center;
+}
+
 @keyframes muncitor {
-    from {min-height: 500px;}
-    to {min-height: 600px;}
+    from {min-height: 600px;}
+    to {min-height: 800px;}
    }
 
 .form-container {
@@ -186,9 +245,9 @@ input {
 }
 
 .overlay {
-	background: #FF416C;
-	background: -webkit-linear-gradient(to right, #FF4B2B, #FF416C);
-	background: linear-gradient(to right, #FF4B2B, #FF416C);
+	background: #59C1BD;
+	background: -webkit-linear-gradient(to right, #0D4C92, #59C1BD);
+	background: linear-gradient(to right, #0D4C92, #59C1BD);
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: 0 0;

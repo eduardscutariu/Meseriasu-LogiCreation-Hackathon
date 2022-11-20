@@ -1,0 +1,12 @@
+<%- include("./partials/header.ejs", {money: money, auth: auth}) %>
+<section class = "jobs">
+<% messages.forEach((message) => { %>
+    <div class = "comp">
+    <h2> user: <%= message.name %> </h2>
+    <p> mesaj: <%= message.message %> </p>
+    <form action="/off" method = "post">
+    <button type = "submit">Trimite oferta</button>
+    </form>
+    </div>
+<% }) %>
+</section>

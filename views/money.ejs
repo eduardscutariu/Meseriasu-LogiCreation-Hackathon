@@ -1,0 +1,8 @@
+<%- include ("./partials/header", {auth:auth, money: money}) %>
+
+<section style = "margin-top:30px">
+<form action = "/money" method = "POST" style = "border-radius: 30px">
+    <input type="text" name = "money" placeholder = "Introdu suma">
+    <button type = "submit" style = "margin-bottom:20px;">Adauga bani</button>
+</form>
+</section>

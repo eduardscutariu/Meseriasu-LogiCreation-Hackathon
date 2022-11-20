@@ -11,10 +11,11 @@ signInButton.addEventListener('click', () => {
 });
 
 document.getElementById("checkbox").addEventListener("click", function() {
-    document.getElementById("department").classList.toggle("hidden");
+    
+    document.querySelector("select").classList.toggle("active");
     document.getElementById("price").classList.toggle("hidden");
     document.querySelector(".container").style.animation = "muncitor 2s";
     setTimeout(function() {
-        document.querySelector(".container").style.minHeight = "600px";
+        document.querySelector(".container").style.minHeight = "800px";
     }, 2000)
 })
